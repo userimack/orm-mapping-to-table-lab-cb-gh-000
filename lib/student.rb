@@ -11,9 +11,14 @@ class Student
   
   def self.create_table
     DB[:conn].execute(
-      "CREATE TABLE STUDENTS(id integer PRIMARY KEY, name TEXT, grade integer);")
+      "CREATE TABLE students(id integer PRIMARY KEY, name TEXT, grade integer);")
   end 
   
   def self.drop_table
+    DB[:conn].execute("DROP TABLE students;")
   end
+  
+  def self.save
+    
+  end 
 end
