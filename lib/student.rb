@@ -24,7 +24,7 @@ class Student
     sql = <<-SQL
     INSERT INTO students(name, grade) VALUES (?, ?)
     SQL
-    DB[:conn].execute(sql, name, grade)
-    DB[:conn].execute("SELECT last_")
+    DB[:conn].execute(sql, self.name, self.grade)
+    DB[:conn].execute("SELECT last_insert_rowid() ")
   end 
 end
