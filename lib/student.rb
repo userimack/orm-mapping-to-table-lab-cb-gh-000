@@ -14,8 +14,6 @@ class Student
       "CREATE TABLE STUDENTS(id integer PRIMARY KEY, name TEXT, grade integer);")
   end 
   
-  def 
-    
-    
-  
+  def self.drop_table
+  end
 end
