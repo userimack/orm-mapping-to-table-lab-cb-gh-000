@@ -9,6 +9,13 @@ class Student
     @id = id 
   end 
   
+  def self.create_table
+    DB[:conn].execute(
+      "CREATE TABLE STUDENTS(id integer PRIMARY KEY, name TEXT, grade integer);")
+  end 
+  
   def 
+    
+    
   
 end
