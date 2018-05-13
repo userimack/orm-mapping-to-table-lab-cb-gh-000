@@ -19,6 +19,7 @@ class Student
   end
   
   def self.save
-    
+    DB[:conn].execute("INSERT INTO students(name, grade) VALUES (?, ?)", name, grade)
+    DB[:conn].execute("SELECT last_")
   end 
 end
