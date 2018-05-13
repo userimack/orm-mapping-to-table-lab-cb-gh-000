@@ -11,7 +11,8 @@ class Student
   
   def self.create_table
     sql = <<-SQL
-    CREATE TABLE students(id integer PRIMARY KEY, name TEXT, grade integer);SQL
+    CREATE TABLE students(id integer PRIMARY KEY, name TEXT, grade integer)
+    SQL
     DB[:conn].execute(sql)
   end 
   
@@ -20,9 +21,9 @@ class Student
   end
   
   def self.save
-  sql = <<-SQL
-  "INSERT INTO students(name, grade) VALUES (?, ?)"
-  
+    sql = <<-SQL
+    INSERT INTO students(name, grade) VALUES (?, ?)
+    SQL
     DB[:conn].execute(sql, name, grade)
     DB[:conn].execute("SELECT last_")
   end 
